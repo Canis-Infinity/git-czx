@@ -221,6 +221,12 @@ async function main() {
     });
   }
 
+  // ✅ 新增：詢問是否要開啟編輯器（避免沒改就關導致 abort）
+  const openEditor = await confirm({
+    message: t('confirm.openEditor'),
+    default: false,
+  });
+
   const tpl = buildTemplate({
     subjectLine,
     footerKind,
@@ -233,14 +239,23 @@ async function main() {
   const tplPath = path.join(tmpDir, 'COMMIT_EDITMSG.tpl');
   fs.writeFileSync(tplPath, tpl, 'utf8');
 
-  const commitArgs = ['commit', '--edit', '-t', tplPath, ...args.passthrough];
+  // ✅ openEditor=true：用 template 開 editor
+  // ✅ openEditor=false：直接用 -m（就算不改訊息也能 commit，不會 abort）
+  const commitArgs = openEditor
+    ? ['commit', '--edit', '-t', tplPath, ...args.passthrough]
+    : ['commit', '-m', subjectLine, ...args.passthrough];
 
   if (args.dryRun) {
     console.log(t('dryRun.title'));
     console.log(`${t('dryRun.locale')} ${args.locale}`);
     console.log(`${t('dryRun.command')} ${['git', ...commitArgs].join(' ')}`);
-    console.log(t('dryRun.template'));
-    console.log(tpl);
+
+    // 只有選擇開 editor 才印模板，否則你只會看到一堆註解心情更差
+    if (openEditor) {
+      console.log(t('dryRun.template'));
+      console.log(tpl);
+    }
+
     console.log(t('dryRun.stagedFiles'));
     console.log(stagedFiles.map((f) => `- ${f}`).join(os.EOL));
     try {

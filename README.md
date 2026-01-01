@@ -1,4 +1,4 @@
-# @canis/git-czx
+# @canis22788/git-czx
 
 An interactive git commit tool that supports **multi-line commit bodies**, **Emoji**, and provides **Traditional Chinese**, **Simplified Chinese**, and **English** locales.
 
@@ -48,15 +48,29 @@ Follow the prompts to complete a commit.
 3. Enter subject (max 50 characters)
 4. Choose issue association (Refs / Closes / Fixes)
 5. Specify whether it includes a BREAKING CHANGE
-6. Open an editor to write the **full multi-line commit message**
+6. **Choose whether to open an editor to edit the full commit message**
 
-Save and close the editor to finish the commit.
+### Editor behavior
+
+* If you **choose to open the editor**:
+
+  * An editor opens with a commit message template
+  * You can write a **multi-line body**, footer, and breaking change details
+  * Save and close the editor to finish the commit
+
+* If you **choose NOT to open the editor**:
+
+  * The commit is created **directly using the subject line**
+  * No editor is opened
+  * The commit still succeeds even if no further changes are made
+
+This avoids Git aborting the commit when an editor is opened but no changes are made.
 
 ---
 
 ## Why git-czx
 
-* 📝 Supports multi-line commit bodies (written in an editor)
+* 📝 Supports multi-line commit bodies (optional editor)
 * 🎯 Follows the Conventional Commits specification
 * 🎸 Built-in Emoji support
 * 🌍 Three locales: zh-TW / zh-CN / en-US
@@ -124,17 +138,7 @@ czx -- --signoff
 
 ---
 
-## Error Messages
-
-Error prefixes depend on locale:
-
-* [錯誤] (zh-TW)
-* [错误] (zh-CN)
-* [Error] (en-US)
-
----
-
-## Example Commit Message
+## Example Commit Message (with editor)
 
 ```text
 feat(blog): 🎸 add markdown image zoom
@@ -146,17 +150,11 @@ feat(blog): 🎸 add markdown image zoom
 Refs: #123
 ```
 
----
+## Example Commit Message (without editor)
 
-## Inspiration
-
-`@canis/git-czx` is inspired by [git-cz](https://github.com/streamich/git-cz).
-
-This project is **not a fork**, but an independent implementation (with some AI assistance), focusing on:
-
-* Strict locale support (zh-TW / zh-CN / en-US)
-* Writing multi-line commit bodies in an editor
-* Clear, localized error messages
+```text
+fix(deps): 🐛 change the name of this package
+```
 
 ---
 

@@ -31,6 +31,7 @@ export type I18nKey =
   // confirm
   | 'confirm.autoAdd'
   | 'confirm.breaking'
+  | 'confirm.openEditor'
   // select
   | 'select.type'
   | 'select.footerKind'
@@ -138,6 +139,7 @@ const ZH_TW: I18nTable = {
   // confirm
   'confirm.autoAdd': '目前沒有已 stage 的變更，要先自動執行 `git add -A` 嗎？',
   'confirm.breaking': '是否包含重大更改（BREAKING CHANGE）？',
+  'confirm.openEditor': '要打開編輯器來編輯 commit 訊息嗎？',
 
   // select
   'select.type': '請選擇您要 Commit 的類型(必選) [{locale}]：',
@@ -191,6 +193,7 @@ const ZH_CN: I18nTable = {
   // confirm
   'confirm.autoAdd': '当前没有已 stage 的变更，要先自动执行 `git add -A` 吗？',
   'confirm.breaking': '是否包含重大更改（BREAKING CHANGE）？',
+  'confirm.openEditor': '要打开编辑器来编辑 commit 信息吗？',
 
   // select
   'select.type': '请选择你要 Commit 的类型(必选) [{locale}]：',
@@ -243,6 +246,7 @@ const EN_US: I18nTable = {
   // confirm
   'confirm.autoAdd': 'No staged changes. Auto-run `git add -A` first?',
   'confirm.breaking': 'Contains BREAKING CHANGE?',
+  'confirm.openEditor': 'Open editor to edit commit message?',
 
   // select
   'select.type': 'Select commit type (required) [{locale}]:',
