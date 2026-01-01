@@ -1,5 +1,5 @@
 {
-  "name": "@canis/git-czx",
+  "name": "@canis22788/git-czx",
   "version": "0.1.0",
   "description": "git-cz style commit tool with multi-line body via editor, cross-platform, strict locales",
   "license": "MIT",
