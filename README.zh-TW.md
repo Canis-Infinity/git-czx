@@ -1,5 +1,11 @@
 # @canis22788/git-czx
 
+[![npm version](https://img.shields.io/npm/v/@canis22788/git-czx?style=flat-square)](https://www.npmjs.com/package/@canis22788/git-czx)
+[![npm downloads](https://img.shields.io/npm/dm/@canis22788/git-czx?style=flat-square)](https://www.npmjs.com/package/@canis22788/git-czx)
+[![node](https://img.shields.io/node/v/@canis22788/git-czx?style=flat-square)](https://www.npmjs.com/package/@canis22788/git-czx)
+[![license](https://img.shields.io/npm/l/@canis22788/git-czx?style=flat-square)](https://github.com/Canis-Infinity/git-czx/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Canis-Infinity/git-czx?style=flat-square)](https://github.com/Canis-Infinity/git-czx)
+
 一個互動式的 git commit 工具，支援 **多行 Commit Body**、**Emoji**，並提供 **繁體中文 / 简体中文 / English** 三種語系。
 
 📘 其他語言：

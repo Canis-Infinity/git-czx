@@ -1,5 +1,11 @@
 # @canis22788/git-czx
 
+[![npm version](https://img.shields.io/npm/v/@canis22788/git-czx?style=flat-square)](https://www.npmjs.com/package/@canis22788/git-czx)
+[![npm downloads](https://img.shields.io/npm/dm/@canis22788/git-czx?style=flat-square)](https://www.npmjs.com/package/@canis22788/git-czx)
+[![node](https://img.shields.io/node/v/@canis22788/git-czx?style=flat-square)](https://www.npmjs.com/package/@canis22788/git-czx)
+[![license](https://img.shields.io/npm/l/@canis22788/git-czx?style=flat-square)](https://github.com/Canis-Infinity/git-czx/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Canis-Infinity/git-czx?style=flat-square)](https://github.com/Canis-Infinity/git-czx)
+
 An interactive git commit tool that supports **multi-line commit bodies**, **Emoji**, and provides **Traditional Chinese**, **Simplified Chinese**, and **English** locales.
 
 📘 Other languages:

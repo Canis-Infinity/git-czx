@@ -4,6 +4,14 @@
   "description": "git-cz style commit tool with multi-line body via editor, cross-platform, strict locales",
   "license": "MIT",
   "author": "Canis Zhang <iistw22788@gmail.com> (https://iistw.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Canis-Infinity/git-czx.git"
+  },
+  "homepage": "https://github.com/Canis-Infinity/git-czx#readme",
+  "bugs": {
+    "url": "https://github.com/Canis-Infinity/git-czx/issues"
+  },
   "type": "module",
   "bin": {
     "czx": "./dist/cli.js",
