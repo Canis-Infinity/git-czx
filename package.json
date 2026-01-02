@@ -1,6 +1,6 @@
 {
   "name": "@canis22788/git-czx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "git-cz style commit tool with multi-line body via editor, cross-platform, strict locales",
   "license": "MIT",
   "author": "Canis Zhang <iistw22788@gmail.com> (https://iistw.com)",
