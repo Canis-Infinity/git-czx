@@ -17,7 +17,7 @@ An interactive git commit tool that supports **multi-line commit bodies**, **Emo
 ## Installation
 
 ```bash
-npm install -g @canis/git-czx
+npm install -g @canis22788/git-czx
 ````
 
 After installation, two commands are available (they behave the same):

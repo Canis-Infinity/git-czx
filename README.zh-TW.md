@@ -17,7 +17,7 @@
 ## 安裝
 
 ```bash
-npm install -g @canis/git-czx
+npm install -g @canis22788/git-czx
 ````
 
 安裝完成後，會有兩個指令可用（功能完全相同）：
